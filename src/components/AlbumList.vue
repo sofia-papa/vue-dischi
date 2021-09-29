@@ -3,7 +3,7 @@
     <div class="logo-container">
       <div class="row">
         <div class="col-12">
-          <img src="" alt="">
+          <img class="logo" src="https://1000logos.net/wp-content/uploads/2021/04/Spotify-logo.png" alt="">
         </div>
       </div>
     </div>
@@ -12,8 +12,8 @@
       <div class="row gy-3">
         <div v-for= "album in albumList" :key= "album.title" class="col-lg-2 col-md-4 col-6 album me-4">
           <img class="img-fluid" :src= "album.poster" :alt= "album.title">
-          <h4>{{album.title}}</h4>
-          <p>{{ album.author }}</p>
+          <h4 class="text-center">{{album.title}}</h4>
+          <p class="text-center">{{ album.author }}</p>
         </div>
       </div>
     </div>
@@ -60,6 +60,10 @@ export default {
     width: 100%;
     background-color: $headerColor;
   }
+.logo{
+  width: 5%;
+  margin-top: 20px;
+}
 
 .album-wrapper{
   padding: 5rem 4rem;
@@ -70,6 +74,13 @@ export default {
       img{
         padding: 1rem 1rem;
       }
+
+  p.text-center{
+    color: $colorAuthor;
+  }
+  h4.text-center{
+    color: $whiteColor;
+  }
   }
 }
 }
